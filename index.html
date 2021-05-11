@@ -93,9 +93,14 @@
         <br>
         <a>13 years old</a>
         <br> <br> <pre>По всем вопросам: <a>Тик-ток</a></pre>
+      <br> <a onclick="soundClick()"> Play music</a>
     </div>
-
-    <audio id="music" src="music.mp3" autoplay="" loop="" onplaying="setTimeout(()=>{window.overlay.remove();render();start_text();},3500);" style="display: none;"></audio>
-
+  <script type="text/javascript">
+      function soundClick() {
+        var audio = new Audio(); // Создаём новый элемент Audio
+        audio.src = 'https://sofia-litvinchuk.github.io/music.mp3'; // Указываем путь к звуку "клика"
+        audio.autoplay = true; // Автоматически запускаем
+      }
+    </script>
 </body>
 </html>
